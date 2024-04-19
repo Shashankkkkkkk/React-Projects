@@ -1,6 +1,9 @@
+/* eslint-env node */
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  content: [
+    "./index.html", 
+    "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
       colors: {
@@ -11,6 +14,6 @@ export default {
         primary: "var(--primary)",
       },
     },
-    plugins: [],
   },
+  plugins: [require('@headlessui/tailwindcss')],
 };
